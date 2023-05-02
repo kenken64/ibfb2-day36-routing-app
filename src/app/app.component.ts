@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'day36-routing-app';
+
+  constructor(private router: Router){}
+
+  gotoTrex(){
+    const x = 1+1;
+    console.log(x);
+    this.router.navigate(['/trex']);
+  }
 }
